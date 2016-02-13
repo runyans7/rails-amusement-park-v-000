@@ -1,0 +1,15 @@
+<% @attractions.each do |attr| %>
+  <div class="well">
+    <%= attr.name %>
+    <br/>
+    <% if current_user.admin? %>
+      <%= link_to "Show #{attr.name}", attraction_path(attr) %>
+    <% else %>
+      <%= link_to "Go on #{attr.name}", attraction_path(attr) %>
+    <% end %>
+  </div>
+<% end %>
+
+<% if current_user.admin? %>
+  <%= link_to 'New Attraction', new_attraction_path %>
+<% end %>

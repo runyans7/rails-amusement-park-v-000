@@ -1,0 +1,25 @@
+<%= form_for @attraction do |f| %>
+  <div class="form-group"p>
+    <%= f.label :name, 'Name' %>
+    <%= f.number_field :name %>
+  </div>
+  <div class="form-group"p>
+    <%= f.label :happiness_rating, 'Happiness Rating (1-5)' %>
+    <%= f.number_field :happiness_rating %>
+  </div>
+  <div class="form-group"p>
+    <%= f.label :nausea_rating, 'Nausea Rating (1-5)' %>
+    <%= f.number_field :nausea_rating %>
+  </div>
+  <div class="form-group"p>
+    <%= f.label :min_height, 'Minimum Height' %>
+    <%= f.number_field :min_height %>
+  </div>
+  <div class="form-group"p>
+    <%= f.label :tickets, 'Cost in tickets' %>
+    <%= f.number_field :tickets %>
+  </div>
+  <div class="form-group">
+    <%= f.submit @attraction.new_record? ? 'Create Attraction' : 'Update Attraction' %>
+  </div>
+<% end %>

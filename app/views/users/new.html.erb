@@ -1,0 +1,33 @@
+<div class="header">
+  <h1>Create New User</h1>
+</div>
+
+<%= form_for @user do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :height, 'Height (in inches)' %>
+    <%= f.number_field :height %>
+  </div>
+  <div class="form-group"p>
+    <%= f.label :happiness, 'How happy are you? (1-5)' %>
+    <%= f.number_field :happiness %>
+  </div>
+  <div class="form-group"p>
+    <%= f.label :nausea, 'How nauseous are you (1-5)' %>
+    <%= f.number_field :nausea %>
+  </div>
+  <div class="form-group"p>
+    <%= f.label :tickets, 'HOw many dollars are in your pocket?' %>
+    <%= f.number_field :tickets %>
+  </div>
+  <div class="form-group"p>
+    <%= f.label :admin, 'Admin of this park?' %>
+    <%= f.check_box :admin %>
+  </div>
+  <div class="form-group"p>
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

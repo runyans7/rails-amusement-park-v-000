@@ -257,7 +257,9 @@ describe 'Feature Test: Admin Flow', :type => :feature do
   end
 
   it 'allows admins to add an attraction from the index page' do
+    save_and_open_page
     click_link('See attractions')
+    save_and_open_page
     expect(page).to have_content("New Attraction")
   end
 
